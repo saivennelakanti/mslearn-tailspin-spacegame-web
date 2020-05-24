@@ -50,7 +50,7 @@ steps:
   inputs:
     command: custom
     custom: add
-    arguments: 'Tailspin.SpaceGame.Web.Tests package coverlet-msbuild' 
+    arguments: 'Tailspin.SpaceGame.Web.Tests package coverlet.msbuild' 
 
 - task: DotNetCoreCLI@2
   displayName: 'Install ReportGenerator'
