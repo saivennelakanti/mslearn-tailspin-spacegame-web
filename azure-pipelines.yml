@@ -59,15 +59,12 @@ steps:
     custom: tool
     arguments: 'install --global dotnet-reportgenerator-globaltool'
 
-- task: DotNetCoreCLI@2
+- script:
+     MSYS2_ARG_CONV_EXCL="*" dotnet test --no-build --configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura   /p:Cov 
+erletOutput=./TestResults/Coverage/
   displayName: 'Run Unit tests - $(BuildConfiguration)'
-  inputs:
-    command: 'test'
-    arguments: ' --no-build --configuration$(BuildConfigurations)  /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
-    PublishTestResults: true
-    projects: '**/*.Tests.csproj'
 
-- script: |
+- script: 
     reportgenerator -reports:$(Build.SourcesDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage -reporttypes:HtmlInline_AzurePipelines
   displayName: 'Create code coverage report'
 
