@@ -1,3 +1,4 @@
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=saivennelakanti_mslearn-tailspin-spacegame-web)](https://sonarcloud.io/dashboard?id=saivennelakanti_mslearn-tailspin-spacegame-web)
 [![Build Status](https://dev.azure.com/skvennelakanti/Space%20Game%20-%20web%20-%20Workflow/_apis/build/status/mslearn-tailspin-spacegame-web?branchName=master)](https://dev.azure.com/skvennelakanti/Space%20Game%20-%20web%20-%20Workflow/_build/latest?definitionId=2&branchName=master)
 
 # Contributing
