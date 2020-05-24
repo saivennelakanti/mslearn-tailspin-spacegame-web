@@ -60,7 +60,7 @@ steps:
     arguments: 'install --global dotnet-reportgenerator-globaltool'
 
 - script:
-     MSYS2_ARG_CONV_EXCL="*" dotnet test --no-build --configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura   /p:Cov 
+    MSYS2_ARG_CONV_EXCL="*" dotnet test --no-build --configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura   /p:Cov 
 erletOutput=./TestResults/Coverage/
   displayName: 'Run Unit tests - $(BuildConfiguration)'
 
